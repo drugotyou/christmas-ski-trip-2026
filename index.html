@@ -90,6 +90,36 @@
       .summary .rnote{font-size:13px;color:var(--ink-soft)}
       .summary p.takeaway{margin:14px 2px 0;color:var(--ink-soft)}
 
+      /* Ski pass and rental */
+      .ski{margin:30px 0 8px;scroll-margin-top:76px}
+      .ski h2{font-size:24px;margin-bottom:6px}
+      .ski p.sub{color:var(--ink-soft);margin:0 0 14px;max-width:62em}
+      .ski-table{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);
+        border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+      .ski-table th,.ski-table td{padding:12px 16px;text-align:right;font-size:15px}
+      .ski-table th:first-child,.ski-table td:first-child{text-align:left}
+      .ski-table thead th{background:var(--spruce);color:var(--spruce-ink);font-weight:700}
+      .ski-table tbody tr+tr td{border-top:1px solid var(--line)}
+      .ski-table td.loc{font-weight:700}
+      .ski-table td.total{font-weight:700;color:var(--spruce)}
+      @media (prefers-color-scheme: dark){ .ski-table td.total{color:#7fc7ae} }
+      .ski-notes{margin:14px 0 0;background:var(--card);border:1px solid var(--line);
+        border-radius:var(--radius);padding:14px 18px;box-shadow:var(--shadow)}
+      .ski-notes ul{margin:0;padding-left:19px;color:var(--ink-soft)}
+      .ski-notes li{margin:5px 0}
+      .ski-notes li strong{color:var(--ink)}
+      @media (max-width:640px){
+        .ski-table,.ski-table tbody,.ski-table tr,.ski-table td{display:block}
+        .ski-table thead{display:none}
+        .ski-table tr{padding:10px 0}
+        .ski-table tbody tr+tr{border-top:1px solid var(--line)}
+        .ski-table tbody tr+tr td{border-top:0}
+        .ski-table td{padding:4px 16px;display:flex;justify-content:space-between;gap:16px}
+        .ski-table td::before{content:attr(data-label);color:var(--ink-soft);font-weight:500;text-align:left}
+        .ski-table td.loc{font-size:17px;padding-top:2px}
+        .ski-table td.loc::before{content:none}
+      }
+
       /* Resort sections */
       section.resort{margin:44px 0 10px;scroll-margin-top:76px}
       .resort-banner{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
@@ -177,6 +207,7 @@
         <a href="#cortina">Cortina</a>
         <a href="#livigno">Livigno</a>
         <a href="#stanton">Austria: St. Anton</a>
+        <a href="#skipass">Skipass e noleggio</a>
         <a href="#date">Date da ricordare</a>
         <span class="fav-count" id="favCount" aria-live="polite">Preferiti: 0</span>
       </div>
@@ -214,6 +245,74 @@
         </div>
         <p class="takeaway">Sul prezzo vincono le località italiane, Livigno e Cortina. Megève è la più cara, ma è anche l'unica, insieme alle Tre Valli e a un appartamento di St. Anton, con opzioni disponibili in entrambe le settimane. Tocca la stella su una scheda per segnare i preferiti e confrontarli con calma.</p>
       </div>
+
+      <!-- SKIPASS E NOLEGGIO -->
+      <section class="ski" id="skipass">
+        <h2>Skipass e noleggio sci</h2>
+        <p class="sub">Oltre all'alloggio c'è il costo delle piste: skipass adulto di <strong>6 giorni</strong> e noleggio completo di fascia media (<strong>sci, scarponi e bastoncini</strong>) per 6 giorni, nella settimana <strong>19–26 dicembre 2026</strong>. Prezzi a persona e totale per i 4 adulti.</p>
+        <table class="ski-table">
+          <thead>
+            <tr>
+              <th scope="col">Località</th>
+              <th scope="col">Skipass 6 giorni</th>
+              <th scope="col">Noleggio 6 giorni</th>
+              <th scope="col">A persona</th>
+              <th scope="col">4 persone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="loc">Megève</td>
+              <td data-label="Skipass 6 giorni">€324,50</td>
+              <td data-label="Noleggio 6 giorni">circa €165</td>
+              <td data-label="A persona">circa €490</td>
+              <td class="total" data-label="4 persone">circa €1.958</td>
+            </tr>
+            <tr>
+              <td class="loc">Val d'Isère</td>
+              <td data-label="Skipass 6 giorni">€468</td>
+              <td data-label="Noleggio 6 giorni">circa €165</td>
+              <td data-label="A persona">circa €633</td>
+              <td class="total" data-label="4 persone">circa €2.532</td>
+            </tr>
+            <tr>
+              <td class="loc">Tre Valli</td>
+              <td data-label="Skipass 6 giorni">€421</td>
+              <td data-label="Noleggio 6 giorni">circa €180</td>
+              <td data-label="A persona">circa €601</td>
+              <td class="total" data-label="4 persone">circa €2.404</td>
+            </tr>
+            <tr>
+              <td class="loc">Cortina</td>
+              <td data-label="Skipass 6 giorni">€453</td>
+              <td data-label="Noleggio 6 giorni">circa €195</td>
+              <td data-label="A persona">circa €648</td>
+              <td class="total" data-label="4 persone">circa €2.592</td>
+            </tr>
+            <tr>
+              <td class="loc">Livigno</td>
+              <td data-label="Skipass 6 giorni">€331</td>
+              <td data-label="Noleggio 6 giorni">circa €125</td>
+              <td data-label="A persona">circa €456</td>
+              <td class="total" data-label="4 persone">circa €1.824</td>
+            </tr>
+            <tr>
+              <td class="loc">St. Anton</td>
+              <td data-label="Skipass 6 giorni">€468</td>
+              <td data-label="Noleggio 6 giorni">circa €245</td>
+              <td data-label="A persona">circa €713</td>
+              <td class="total" data-label="4 persone">circa €2.852</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="ski-notes">
+          <ul>
+            <li><strong>Megève conviene in anticipo:</strong> lo skipass scende a <strong>€289,50</strong> se si compra online almeno 10 giorni prima.</li>
+            <li><strong>In Italia il casco è obbligatorio:</strong> per Cortina e Livigno contare circa <strong>€30-40 a settimana in più</strong> per il noleggio del casco, non inclusi nei totali qui sopra.</li>
+            <li><strong>La settimana da domenica (20–27 dicembre)</strong> costa uguale ovunque, tranne a Livigno: uno skipass che parte il 21 dicembre entra nella fascia di alta stagione il 26 dicembre.</li>
+          </ul>
+        </div>
+      </section>
 
       <!-- MEGÈVE -->
       <section class="resort" id="megeve">
